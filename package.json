@@ -1,0 +1,22 @@
+{
+  "name": "ethernaut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "repository": "https://github.com/merlincdj/ethernaut",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "truffle test",
+    "migrate": "truffle migrate"
+  },
+  "author": "merlincdj",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.1",
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "dotenv": "^10.0.0"
+  }
+}
