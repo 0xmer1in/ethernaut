@@ -11,12 +11,8 @@ interface ICoinFlip {
 contract CoinFlipHack {
     using SafeMath for uint256;
 
-    ICoinFlip public coinFlip;
+    ICoinFlip public coinFlip = ICoinFlip(0x2fd852b45095fF6048B6Cc42883959d44F4aB521);
     uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
-
-    constructor(address initialCoinFlip) public {
-        coinFlip = ICoinFlip(initialCoinFlip);
-    }
 
     function getConsecutiveWins() public view returns (uint256) {
         return coinFlip.consecutiveWins();
