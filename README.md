@@ -17,11 +17,11 @@ contract.address
 '0x....'
 ```
 ```shell
-// Truffle
+# Truffle
 truffle compile
 truffle test
 truffle migrate  // open Ganache first
-// or
+# or
 truffle migrate --network rinkeby
 ```
 
