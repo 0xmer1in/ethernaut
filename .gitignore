@@ -128,3 +128,6 @@ cache/
 build/
 typechain/
 crytic-export/
+
+# PyCharm files
+.idea/
