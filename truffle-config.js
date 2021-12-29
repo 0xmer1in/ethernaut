@@ -75,7 +75,7 @@ module.exports = {
       ),
       network_id: 4,       // Rinkeby's id
       gasPrice: 3,
-      gas: 5500000,
+      gas: 30000000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )

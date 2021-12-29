@@ -1,3 +1,10 @@
+```javascript
+(await contract.balanceOf(player)).words[0]
+(await contract.balanceOf(level)).words[0]
+await contract.transfer(level, 21)
+```
+
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
@@ -21,3 +28,4 @@ contract Token {
     return balances[_owner];
   }
 }
+```

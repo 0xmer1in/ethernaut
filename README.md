@@ -24,4 +24,3 @@ truffle migrate  // open Ganache first
 # or
 truffle migrate --network rinkeby
 ```
-
