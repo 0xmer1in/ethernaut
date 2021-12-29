@@ -6,6 +6,8 @@ truffle migrate --network rinkeby --f 23 --to 23
 ```javascript
 await contract.balanceOf(await contract.token1(), contract.address).then(x=>x.toNumber())
 // 0
+await contract.balanceOf(await contract.token2(), contract.address).then(x=>x.toNumber())
+// 0
 ```
 
 ```solidity
