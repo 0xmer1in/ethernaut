@@ -2,7 +2,7 @@
 // Reference: https://github.com/maAPPsDEV/motorbike-attack
 // Reference: https://github.com/OpenZeppelin/ethernaut/blob/master/contracts/contracts/attacks/MotorbikeAttack.sol
 await web3.eth.getStorageAt(await contract.address, '0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc')
-// 0x000000000000000000000000.....(Implementation Slot)
+// 0x000000000000000000000000.....(AddressSlot)
 ```
 
 ```shell
